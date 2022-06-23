@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javasctipt Calculator</title>
+  <script src="./index.js" defer></script>
+</head>
+<style>
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem
+  }
+
+  .mb {
+    margin-bottom: 7px;
+  }
+
+  .full-padding {
+    padding: 10px;
+  }
+
+  .success {
+    color: green;
+
+  }
+
+  .error {
+    color: red;
+  }
+
+  .answer {
+    padding-top: 10px;
+  }
+</style>
+
+<body>
+  <dialog id='calculateDialog'>
+    <form method="dialog" class='full-padding'>
+      <div class='section'>
+        <label for="firstInput" class='mb'>Please enter your first input: </label>
+        <input type="number" name="firstInput" id="firstInput" class="firstInput"
+          placeholder="Enter a number">
+      </div>
+      <div class='section'>
+        <label for="operation">Operation: </label>
+        <select name="operation" id="operation">
+          <!-- <option value="">Choose...</option> -->
+          <option value="+" selected>Add</option>
+          <option value="/">Divide</option>
+          <option value="*">Multiply</option>
+          <option value="-">Subtract</option>
+
+        </select>
+      </div>
+      <div class='section'>
+        <label for="secondInput">Please enter your second input: </label>
+        <input type="number" name="secondInput" id="secondInput" class='secondInput'
+          placeholder="Enter a number">
+      </div>
+      <div>
+        <button id="confirmBtn" value="default">Confirm</button>
+        <!-- <button value="cancel" id='cancelBtn'>Cancel</button> -->
+      </div>
+
+    </form>
+  </dialog>
+  <h2>Welcome to a simple Calculator</h2>
+  <p>Using Javascript</p>
+  <button type="button" class="btn" id='startCalc'>Start</button>
+  <div class='answer'>
+    <output></output>
+  </div>
+</body>
+
+</html>
